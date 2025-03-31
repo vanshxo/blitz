@@ -36,7 +36,7 @@ export default function AnimatedSequence() {
         setStage(3)
         setFadeOut(false)
       }, 500)
-    }, 9000)
+    }, 8000)
 
     // Stage 3: "WAKE UP TO REALITY" with "SEE YOU SOON" for 2 seconds
     const timer4 = setTimeout(() => {
@@ -45,7 +45,7 @@ export default function AnimatedSequence() {
         setStage(4)
         setFadeOut(false)
       }, 500)
-    }, 13000)
+    }, 11000)
 
     return () => {
       clearTimeout(timer1)
@@ -71,7 +71,7 @@ export default function AnimatedSequence() {
       {stage === 4 && (
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
-            src="/placeholder.svg?height=600&width=800"
+            src="/PHOTO-2025-03-31-19-57-29-removebg-preview.png"
             alt="Final image"
             width={800}
             height={600}
@@ -89,11 +89,12 @@ export default function AnimatedSequence() {
         >
           {stage === 0 && <h1 className="text-5xl md:text-7xl font-bold text-white text-center">blitz is cooking</h1>}
 
-          {stage === 1 && <ASCIIText
-  text='Dream?'
-  enableWaves={true}
-  asciiFontSize={8}
-/>}
+          {stage === 1 && 
+ <div className="flex items-center justify-center min-h-screen w-4 overflow-visible">
+ <ASCIIText text="Dream?" enableWaves={true} asciiFontSize={8} planeBaseHeight={2} />
+</div>
+
+}
 
           {stage === 2 && (
             <h1 className="text-5xl md:text-7xl font-bold text-red-600 text-center animate-pulse">NIGHTMARE!!!</h1>
