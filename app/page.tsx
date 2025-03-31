@@ -69,7 +69,7 @@ export default function AnimatedSequence() {
 
       {/* Final image (only visible at stage 4) */}
       {stage === 4 && (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center animate-scaleDown">
           <Image
             src="/PHOTO-2025-03-31-19-57-29-removebg-preview.png"
             alt="Final image"
@@ -108,6 +108,10 @@ export default function AnimatedSequence() {
           )}
         </div>
       )}
+      <audio autoPlay>
+        <source src="/untitledbg.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </div>
   )
 }
